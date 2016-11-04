@@ -38,9 +38,11 @@ for archlinuxarm users:
     # systemctl daemon-reload
   ```
 5. Enable and start _rsspi_ service
+
   ```
     # systemctl enable rsspi
   ```
+  
   ```
     # systemctl start rsspi
   ```
