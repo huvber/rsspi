@@ -31,9 +31,11 @@ for archlinuxarm users:
     # chmod +x index.coffee
   ```
 4. copy the file `rsspi.service`  to **/etc/systemd/system**
+
   ```
     # cp rsspi.service /etc/systemd/system/rsspi.service
   ```
+
   ```
     # systemctl daemon-reload
   ```
@@ -42,7 +44,7 @@ for archlinuxarm users:
   ```
     # systemctl enable rsspi
   ```
-  
+
   ```
     # systemctl start rsspi
   ```
