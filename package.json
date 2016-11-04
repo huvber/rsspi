@@ -1,0 +1,19 @@
+{
+  "name": "rsspi",
+  "version": "0.0.1",
+  "description": "Little daemon that whatch over Rss feeds and download links from it",
+  "main": "index.coffee",
+  "scripts": {
+    "test": "mocha test.coffee",
+    "start": "coffee index.coffee"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://www.github.com/huvber/rsspi"
+  },
+  "author": "huvber",
+  "license": "MIT",
+  "dependencies": {
+    "feed-poll": "0.0.1"
+  }
+}
