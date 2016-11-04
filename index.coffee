@@ -1,5 +1,4 @@
-fs = require 'fs'
-config = JSON.parse fs.readFileSync './config.json'
+config = require './config'
 pool = require('feed-poll')(config.feeds)
 
 pool.on 'article', (article) ->

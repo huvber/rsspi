@@ -4,7 +4,6 @@
   "description": "Little daemon that whatch over Rss feeds and download links from it",
   "main": "index.coffee",
   "scripts": {
-    "test": "mocha test.coffee",
     "start": "coffee index.coffee"
   },
   "repository": {
