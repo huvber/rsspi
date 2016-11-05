@@ -10,3 +10,9 @@ module.exports =
   # The download folder where the linked torrents will be saved if the linked
   # in the article ends with .torrents
   download_dir: ''
+
+  #url of transmission-daemon
+  daemon:
+    url: ''
+    user: ''
+    password: ''

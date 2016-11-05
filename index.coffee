@@ -1,8 +1,10 @@
 config = require './config'
 fs = require 'fs'
 request = require 'request'
-exec = require('child_process').exec
 pool = require('feed-poll')(config.feeds)
+Powersteer = require 'powersteer'
+
+rpc = new Powersteer config.daemon
 
 pool.on 'article', (article) ->
   type = ''
@@ -24,13 +26,7 @@ pool.on 'article', (article) ->
       console.log "\t #{filename}  saved in #{config.download_dir}"
       return
     when 'magnet'
-      exec "tranmission-cli #{article.link}", (error, stdout, stderr) ->
-        if error?
-          console.log 'error to send link to transmission', error
-          return
-        console.log "\t #{article.link} sent to transmission"
-        console.log stdout
-      return
+      rpc.torrentAdd( url: article.link)
     else console.log "\t no recognisable type"
 
 
